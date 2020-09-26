@@ -3,11 +3,11 @@ const fs=require('fs')
 
 const pdfdoc=new pdfkit
 
-pdfdoc.pipe(fs.createWriteStream('Output.pdf'))
-pdfdoc.image('path/to/image.png', {
+pdfdoc.pipe(fs.createWriteStream('Outout.pdf'))
+pdfdoc.image('path/to/image.png',{
     fit: [250, 300],
     align: 'center',
     valign: 'center'
- });
+})
 
- pdfdoc.text("hello world")
+pdfdoc.text("hello world")
